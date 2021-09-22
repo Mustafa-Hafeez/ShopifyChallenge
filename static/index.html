@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>WebGallery
+      </title>
+      <link href="/style/form.css" rel="stylesheet" type="text/css"/>
+      <link href="/style/displayImg.css" rel="stylesheet" type="text/css"/>
+      <link href="/style/comments.css" rel="stylesheet" type="text/css"/>
+   </head>
+   <body>
+      <header>
+         <a href="/" id="title">WebGallery</a>
+         <br></br>
+         <a href="/login.html" id="signin_button" class="btn header_btn hidden">Sign in or Sign up</a>
+         <a href="/signout/" id="signout_button" class="btn header_btn hidden">Sign out</a>
+      </header>
+      <p id="error_box"></p>
+      <div id="gallery" style="visibility: hidden;">
+         <div id="userDisplay">
+            <button id="prev_user" class="btn">Previous User</button>
+            <button id="current_user" class="btn" >Current User</button>
+            <button id="next_user" class="btn">Next User</button>
+         </div>
+         <form class="complex_form" id="add_item">
+            <input type="text" class="form_element" id="img_name" placeholder="Image Title" name="user_name" required />
+            <input type="file" name="picture" class="form_element" id="pic_file" required/>
+            <input type="submit" class="btn" value="Post Image">
+         </form>
+         <button id="image_form">Hide</button>
+         <div id = "image_display">
+            <div name="image" id="current_image">
+            </div>
+            <button id="prev_img" class="btn">Previous Image</button>
+            <button id="del_image" class="btn">Delete Image</button>
+            <button id="next_img" class="btn">Next Image</button>
+         </div>
+         <div id="messages"></div>
+         <button id="prev_msg" class="btn">Older Comments</button>
+         <button id="next_msg"class="btn">Newer Comments</button>
+         <form class="complex_form" id="create_message_form">
+            <div class="form_title">Comments</div>
+            <textarea rows="5" id="post_content" class="form_element" name="user_message" placeholder="Enter your message" required></textarea>
+            <button type="submit" class="btn">Add Comment</button>
+         </form>
+      </div>
+      <footer>
+         <a href='/credits.html'>credits</a>
+      </footer>
+      <script src="js/api.js"></script>
+      <script src="js/index.js"></script>
+   </body>
+</html>
